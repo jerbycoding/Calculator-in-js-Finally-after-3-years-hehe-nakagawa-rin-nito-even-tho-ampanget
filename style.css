@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    
+
+}
+
+@media(max-width: 600px) {
+    .container {
+        min-height: 100vh;
+        background-color: darkcyan;
+    }
+    .calculator {
+        width: 90%;
+        margin: 0 auto;
+        position: relative;
+        top: 60px;
+        height: 550px;
+        background-color: rgb(29, 26, 26);
+        display: grid;
+        grid-template-columns: 15px 80px 30px 1fr 15px ;
+        grid-template-rows: 20px 60px 15px 420px;
+        grid-template-areas: 
+        ". . . . ."
+        ". display display display ."
+        ". . . . ."
+        ". operators . numbers . "
+    }
+    .display {
+        grid-area: display;
+        background-color: rgb(123, 156, 103);
+        font-size: 25px;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        border-radius: 5px 2px 5px 2px;
+        color: rgb(4, 37, 4);
+        
+
+    }
+    .operators {
+        grid-area: operators;
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 10px;
+        
+    }
+    .operators .operator{
+        background-color: rgb(246, 254, 92);
+        width: 80%;
+        margin: 0px auto;
+        padding: 20px 0px;
+        border-radius: 9px;
+        text-align: center;
+        border-right: 4px solid rgb(135, 138, 3);
+        border-bottom: 5px solid rgb(122, 135, 4);
+    }
+    .operators .operator p{
+        color: black;
+        font-size: 20px;
+    }
+    .operators .operator:active{
+        background-color: rgb(239, 248, 61);
+        border: 0px;
+    }
+   .operators .equal{
+        background-color: yellow;
+
+   }
+   .operators .equal p{
+    color: rgb(86, 75, 75);
+   }
+    
+    .numbers{
+        grid-area: numbers;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 10px;
+        align-items: center;
+        
+    }
+    .numbers .number{
+        background-color: rgb(196, 183, 183);
+        padding: 13px  5px;
+        border-radius: 13px;
+        border-right: 2px solid rgb(129, 105, 105);
+        border-bottom: 3px solid rgb(82, 78, 78);
+    }
+    
+    .numbers .number p {
+        text-align: center;
+        font-size: 23px;
+        color: white;
+    }
+    .number:active{
+        background-color: rgb(65, 63, 63);
+        border: 0px;
+        
+    }
+   
+    
+}
